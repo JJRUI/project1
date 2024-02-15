@@ -1,8 +1,7 @@
 # page.py
 import random
+import setting as S
 import tkinter as tk
-
-from setting import judgment, odd_sum
 
 
 class Page:
@@ -56,10 +55,10 @@ class Page:
         if input_number.isdigit():
             input_number = int(input_number)
             if self.string == '1':
-                result = odd_sum(input_number)
+                result = S.odd_sum(input_number)
                 self.result_label.config(text=f"正整数{input_number}之前的所有奇数的平方和为:{result}")
             elif self.string == '2':
-                result = judgment(input_number)
+                result = S.judgment(input_number)
                 self.result_label.config(text=f"结果为:{result}")
         else:
             self.result_label.config(text="请输入正整数")
@@ -72,10 +71,10 @@ class Page:
         self.entry.insert(0, string)
         input_number = int(string)
         if self.string == '1':
-            result = odd_sum(input_number)
+            result = S.odd_sum(input_number)
             self.result_label.config(text=f"正整数{input_number}之前的所有奇数的平方和为:{result}")
         elif self.string == '2':
-            result = judgment(input_number)
+            result = S.judgment(input_number)
             self.result_label.config(text=f"结果为:{result}")
 
     # 处理按钮3点击事件

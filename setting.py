@@ -1,6 +1,7 @@
 # setting.py
 import pyautogui
 
+
 screen_width, screen_height = pyautogui.size()
 window_width = 300
 window_height = 300

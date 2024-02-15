@@ -1,7 +1,7 @@
 # page_main.py
 import tkinter as tk
-from page import Page
 import setting as S
+from page import Page
 
 
 class MYGUI:
